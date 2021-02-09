@@ -1,23 +1,23 @@
 <?php 
 include 'functions.php'; // panggil perintah koneksi database 
 
-if(!isset($_SESSION['username'] )== 0) { // cek session apakah kosong(belum login) maka alihkan ke index.php
+if(!isset($_SESSION['npm'] )== 0) { // cek session apakah kosong(belum login) maka alihkan ke index.php
     header('Location: index.php');
 }
 
 if(isset($_POST['login'])) { // mengecek apakah form variabelnya ada isinya
-    $username = $_POST['username']; // isi varibel dengan mengambil data username pada form
+    $username = $_POST['npm']; // isi varibel dengan mengambil data username pada form
     $password = md5($_POST['password']); // isi variabel dengan mengambil data password pada form
     try {
-        $sql = "SELECT * FROM login WHERE username = :username AND password = :password"; // buat queri select
+        $sql = "SELECT * FROM taruna WHERE npm = :npm AND password = :password"; // buat queri select
         $stmt = $conn->prepare($sql); 
-        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':npm', $username);
         $stmt->bindParam(':password', $password);
         $stmt->execute(); // jalankan query
 
         $count = $stmt->rowCount(); // mengecek row
         if($count == 1) { // jika rownya ada 
-            $_SESSION['username'] = $username; // set sesion dengan variabel username
+            $_SESSION['npm'] = $npm; // set sesion dengan variabel username
             header("Location: update.php"); // lempar variabel ke tampilan index.php
             return;
         }
