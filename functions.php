@@ -8,7 +8,7 @@ session_start(); // ini adalah kode untuk memulai session
         $password = "";
         
         try{
-            $conn = new PDO("mysql:localhost=$host; dbname=pdocrud", $username, $password);
+            $conn = new PDO("mysql:localhost=$host; dbname=inventaris", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
         }catch (PDOException $e){
