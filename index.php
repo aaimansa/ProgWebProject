@@ -58,67 +58,50 @@ if($cek > 0){
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>System Login</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144808195-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+<html>
+    <head>
+        <title>Login </title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	  gtag('config', 'UA-144808195-1');
-	</script>
-    <script src="jquery.min.js"></script>
-	<style>body{background-image:url("bg.jpg");}
-	@media screen and (max-width: 600px) {
-h4{font-size:85%;}
-}
-	</style>
-	<link rel="icon" 
-      type="image/png" 
-      href="favicon.png">
-  </head>
-  <body>
-  
-  <div align="center">
-  
-  
-  
-
-  <! --img src="logo.png" width="50%" style="margin-top:5%" \ -->
-
-	<br \><br \>
-			<div class="container">
-					<div style="color:white">
-					<label>Login information for Demo :</label><br \>
-					<label>Username & Password : guest</label><br \>
-					</div>
-                <form method="post">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="NPM" name="username" autofocus>
+    </head>
+    <body style="background:#586df5;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <br/><br/>
+                <div class="alert alert-danger">
+                    <small>Login Anda Gagal, Periksa Kembali Username dan Password</small>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Login</h4>
                     </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary" name="btn-login">Masuk</button>
-			
-                </form>
-			
-			<br \>
-        </div></div>
-       
-     
-	
-	
-  </body>
+                    <div class="card-body">
+						<!-- form berfungsi mengirimkan data input 
+						dengan method post ke proses login dengan paramater get aksi login -->
+                        <form method="post" action="" id="formlogin">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input name="username" class="form-control" placeholder="username" type="text" required="required" autocomplete="off">
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input name="password" class="form-control" placeholder="******" type="password" required="required" autocomplete="off">
+                        </div> <!-- form-group// --> 
+                        <div class="form-group">
+                            <button type="submit" name="btn-login" class="btn btn-primary btn-block"> Login  </button>
+                        </div> <!-- form-group// -->                                                           
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div> 
+    </div>
+    </body>
 </html>
