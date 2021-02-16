@@ -6,14 +6,12 @@
     include 'cek.php';
 
     if(isset($_POST['update'])){
-        $id = $_POST['noLaporan'];
-        $tanggalLapor = curdate();
-
+        $id = $_POST['id'];
         $kodeKamar = $_SESSION['user'];
         $kerusakan = $_POST['kerusakan'];
         $status = $_POST['status'];
 
-        $updatedata = mysqli_query($conn,"update sstock_brg set tanggalLapor='$tanggalLapor', kerusakan='$kerusakan', status='$status' where noLaporan='$id'");
+        $updatedata = mysqli_query($conn,"update sstock_brg set kerusakan='$kerusakan', status='$status' where noLaporan='$id'");
         
         //cek apakah berhasil
         if ($updatedata){
@@ -30,7 +28,7 @@
     };
 
     if(isset($_POST['hapus'])){
-        $id = $_POST['noLaporan'];
+        $id = $_POST['id'];
 
         $delete = mysqli_query($conn,"delete from sstock_brg where noLaporan='$id'");
         //hapus juga semua data barang ini di tabel keluar-masuk
@@ -244,15 +242,12 @@
                                                             
                                                             <!-- Modal body -->
                                                             <div class="modal-body">
-                                                            
-                                                            <label for="nama">Kode Kamar</label>
-                                                            <input type="text" id="nama" name="kodeKamar" class="form-control" value="<?php echo $p['kodeKamar'] ?>">
-
                                                             <label for="jenis">Kerusakan</label>
                                                             <input type="text" id="jenis" name="kerusakan" class="form-control" value="<?php echo $p['kerusakan'] ?>">
 
                                                             <label for="merk">Status</label>
-                                                            <input type="text" id="merk" name="status" class="form-control" value="<?php echo $p['status'] ?>">                                                           
+                                                            <input type="text" id="merk" name="status" class="form-control" value="<?php echo $p['status'] ?>">   
+                                                            <input type="hidden" name="id" value="<?=$idb;?>">                                                        
                                                             </div>
                                                             
                                                             <!-- Modal footer -->
@@ -274,14 +269,14 @@
                                                         <form method="post">
                                                             <!-- Modal Header -->
                                                             <div class="modal-header">
-                                                            <h4 class="modal-title">Hapus Barang <?php echo $p['nama']?> - <?php echo $p['jenis']?> - <?php echo $p['ukuran']?></h4>
+                                                            <h4 class="modal-title">Hapus Barang <?php echo $p['kodeKamar']?> - <?php echo $p['kerusakan']?> - <?php echo $p['status']?></h4>
                                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                             </div>
                                                             
                                                             <!-- Modal body -->
                                                             <div class="modal-body">
                                                             Apakah Anda yakin ingin menghapus barang ini dari daftar stock?
-                                                            <input type="hidden" name="idbrg" value="<?=$idb;?>">
+                                                            <input type="hidden" name="id" value="<?=$idb;?>">
                                                             </div>
                                                             
                                                             <!-- Modal footer -->
@@ -332,10 +327,7 @@
 						</div>
 						<div class="modal-body">
 							<form action="tmb_brg_act.php" method="post">
-								<div class="form-group">
-									<label>Kode Kamar</label>
-									<input name="nama" type="text" class="form-control" placeholder="Nama Barang" required>
-								</div>
+								
 								<div class="form-group">
 									<label>Kerusakan</label>
 									<input name="kerusakan" type="text" class="form-control" placeholder="Kerusakan Kamar">
