@@ -120,8 +120,7 @@ if($cek > 0){
                     <div class="card-body">
                         <img class="image" src="stock/poltek.png" alt="Avatar">
                             <div class="overlay">
-                            <!-- form berfungsi mengirimkan data input 
-                            dengan method post ke proses login dengan paramater get aksi login -->
+                            <!-- form berfungsi mengirimkan data input dengan method post ke proses login dengan paramater get aksi login -->
                             <br><br>
                             <div class="alert alert-secondary">
                             <small>Masukkan NPM dan Password yang terdaftar</small>
