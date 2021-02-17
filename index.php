@@ -60,14 +60,27 @@ if($cek > 0){
 
 <html>
     <head>
-        <title>Login </title>
+        <title>KORPSTAR POLTEKSSN </title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style>body{background-image:url("bg.jpg");
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+        }
+        
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+	</style>
 
     </head>
-    <body style="background:#586df5;">
+    <body>
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
@@ -75,26 +88,24 @@ if($cek > 0){
             <div class="col-sm-4">
                 <br/><br/>
                 <div class="alert alert-danger">
-                    <small>Login Anda Gagal, Periksa Kembali Username dan Password</small>
+                    <small>Masukkan kembali NPM dan Password</small>
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Login</h4>
+                        <img class = "center" src="stock/poltek.png"">
                     </div>
                     <div class="card-body">
 						<!-- form berfungsi mengirimkan data input 
 						dengan method post ke proses login dengan paramater get aksi login -->
                         <form method="post" action="" id="formlogin">
                         <div class="form-group">
-                            <label>Username</label>
-                            <input name="username" class="form-control" placeholder="username" type="text" required="required" autocomplete="off">
+                            <input name="username" class="form-control" placeholder="NPM" type="text" required="required" autocomplete="off">
                         </div> <!-- form-group// -->
                         <div class="form-group">
-                            <label>Password</label>
-                            <input name="password" class="form-control" placeholder="******" type="password" required="required" autocomplete="off">
+                            <input name="password" class="form-control" placeholder="Password" type="password" required="required" autocomplete="off">
                         </div> <!-- form-group// --> 
                         <div class="form-group">
-                            <button type="submit" name="btn-login" class="btn btn-primary btn-block"> Login  </button>
+                            <button type="submit" name="btn-login" class="btn btn-primary btn-block">Login</button>
                         </div> <!-- form-group// -->                                                           
                     </form>
                 </div>
