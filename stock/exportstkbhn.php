@@ -8,7 +8,7 @@
 
 <html>
 <head>
-<title>*Data Stock Bahan</title>
+<title>Kerusakan Inventaris Kamar</title>
 <link rel="icon" 
       type="image/png" 
       href="favicon.png">
@@ -35,24 +35,20 @@
 
 <body>
 		<div class="container">
-			<h2>Stock Bahan</h2>
-			<h4>(Inventory)</h4>
+			<h2>Kerusakan Inventaris Kamar</h2>
 				<div class="data-tables datatable-dark">
 					<table id="dataTable3" class="display" style="width:100%"><thead class="thead-dark">
 											<tr>
 												<th>No</th>
-												<th>Nama Barang</th>
-												<th>Jenis</th>
-												<th>Merk</th>
-												<th>Ukuran</th>
-												<th>Stock</th>
-												<th>Satuan</th>
-												<th>Lokasi</th>
+												<th>Tanggal Lapor</th>
+												<th>Kode Kamar</th>
+												<th>Kerusakan</th>
+												<th>Status</th>
 												
 												<!--<th>Opsi</th>-->
 											</tr></thead><tbody>
 											<?php 
-											$brgs=mysqli_query($conn,"SELECT * from sstock_brg order by nama ASC");
+											$brgs=mysqli_query($conn,"SELECT * from sstock_brg order by kodekamar ASC");
 											$no=1;
 											while($p=mysqli_fetch_array($brgs)){
 
@@ -60,13 +56,10 @@
 												
 												<tr>
 													<td><?php echo $no++ ?></td>
-													<td><?php echo $p['nama'] ?></td>
-													<td><?php echo $p['jenis'] ?></td>
-													<td><?php echo $p['merk'] ?></td>
-													<td><?php echo $p['ukuran'] ?></td>
-													<td><?php echo $p['stock'] ?></td>
-													<td><?php echo $p['satuan'] ?></td>
-													<td><?php echo $p['lokasi'] ?></td>
+													<td><?php echo $p['tanggalLapor'] ?></td>
+													<td><?php echo $p['kodeKamar'] ?></td>
+													<td><?php echo $p['kerusakan'] ?></td>
+													<td><?php echo $p['status'] ?></td>
 												</tr>		
 												<?php 
 											}
