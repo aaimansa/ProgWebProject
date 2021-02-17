@@ -21,7 +21,6 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144808195-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -45,7 +44,6 @@
 												<th>Kerusakan</th>
 												<th>Status</th>
 												
-												<!--<th>Opsi</th>-->
 											</tr></thead><tbody>
 											<?php 
 											$brgs=mysqli_query($conn,"SELECT * from sstock_brg order by kodekamar ASC");

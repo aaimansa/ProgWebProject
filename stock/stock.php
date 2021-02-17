@@ -31,7 +31,6 @@
         $id = $_POST['id'];
 
         $delete = mysqli_query($conn,"delete from sstock_brg where noLaporan='$id'");
-        //hapus juga semua data barang ini di tabel keluar-masuk
         
         //cek apakah berhasil
         if ($delete){
@@ -63,7 +62,6 @@
     <link rel="stylesheet" href="assets/css/metisMenu.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.min.css">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144808195-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -72,9 +70,7 @@
 
 	  gtag('config', 'UA-144808195-1');
 	</script>
-    <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-	<!-- Start datatable css -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
@@ -82,12 +78,10 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">
 	
-    <!-- others css -->
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/default-css.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
     <style>
     .center {
@@ -100,17 +94,10 @@
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <!-- preloader area start -->
     <div id="preloader">
         <div class="loader"></div>
     </div>
-    <!-- preloader area end -->
-    <!-- page container area start -->
     <div class="page-container">
-        <!-- sidebar menu area start -->
         <div class="sidebar-menu">
             <div class="sidebar-header">
                     <a href="index.php"><img class = "center" src="poltek.png" alt="logo" width="50%"></a>
@@ -133,13 +120,9 @@
                 </div>
             </div>
         </div>
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
         <div class="main-content">
-            <!-- header area start -->
             <div class="header-area">
                 <div class="row align-items-center">
-                    <!-- nav and search button -->
                     <div class="col-md-6 col-sm-8 clearfix">
                         <div class="nav-btn pull-left">
                             <span></span>
@@ -152,7 +135,6 @@
                             </form>
                         </div>
                     </div>
-                    <!-- profile info & task notification -->
                     <div class="col-md-6 col-sm-4 clearfix">
                         <ul class="notification-area pull-right">
                             <li><h3><div class="date">
@@ -167,8 +149,7 @@
 							thisDay = myDays[thisDay];
 						var yy = date.getYear();
 						var year = (yy < 1000) ? yy + 1900 : yy;
-						document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);		
-						//-->
+						document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
 						</script></b></div></h3>
 
 						</li>
@@ -176,10 +157,8 @@
                     </div>
                 </div>
             </div>
-            <!-- header area end -->
 			
 			
-            <!-- page title area start -->
             <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
@@ -198,17 +177,15 @@
                     </div>
                 </div>
             </div>
-            <!-- page title area end -->
             <div class="main-content-inner">
                
-                <!-- market value area start -->
                 <div class="row mt-5 mb-5">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center">
 									<h2>Kerusakan Inventaris Kamar</h2>
-									<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2"><span class="glyphicon glyphicon-plus"></span>Tambah</button>
+									<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2"><span class="glyphicon glyphicon-plus"></span>Tambahkan</button>
                                 </div>
                                     <div class="data-tables datatable-dark">
 										 <table id="dataTable3" class="display" style="width:100%"><thead class="thead-dark">
@@ -218,6 +195,7 @@
 												<th>Kode Kamar</th>
 												<th>Kerusakan</th>
 												<th>Status</th>
+                                                <th></th>
 
 											</tr></thead><tbody>
 											<?php 
@@ -237,18 +215,15 @@
 												</tr>
 
 
-                                                <!-- The Modal -->
                                                     <div class="modal fade" id="edit<?=$idb;?>">
                                                         <div class="modal-dialog">
                                                         <div class="modal-content">
                                                         <form method="post">
-                                                            <!-- Modal Header -->
                                                             <div class="modal-header">
                                                             <h4 class="modal-title">Edit Kerusakan Inventaris Kamar <?php echo $p['kodeKamar']?></h4>
                                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                             </div>
                                                             
-                                                            <!-- Modal body -->
                                                             <div class="modal-body">
                                                             <label for="jenis">Kerusakan</label>
                                                             <input type="text" id="jenis" name="kerusakan" class="form-control" value="<?php echo $p['kerusakan'] ?>">
@@ -258,7 +233,6 @@
                                                             <input type="hidden" name="id" value="<?=$idb;?>">                                                        
                                                             </div>
                                                             
-                                                            <!-- Modal footer -->
                                                             <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                                             <button type="submit" class="btn btn-success" name="update">Save</button>
@@ -270,24 +244,20 @@
 
 
 
-                                                    <!-- The Modal -->
                                                     <div class="modal fade" id="del<?=$idb;?>">
                                                         <div class="modal-dialog">
                                                         <div class="modal-content">
                                                         <form method="post">
-                                                            <!-- Modal Header -->
                                                             <div class="modal-header">
                                                             <h4 class="modal-title">Hapus Kerusakan Inventaris Kamar <?php echo $p['kodeKamar']?></h4>
                                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                             </div>
                                                             
-                                                            <!-- Modal body -->
                                                             <div class="modal-body">
                                                             Apakah Anda yakin ingin menghapus kerusakan inventaris kamar ini?
                                                             <input type="hidden" name="id" value="<?=$idb;?>">
                                                             </div>
                                                             
-                                                            <!-- Modal footer -->
                                                             <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                                             <button type="submit" class="btn btn-success" name="hapus">Hapus</button>
@@ -312,21 +282,15 @@
                 </div>
               
                 
-                <!-- row area start-->
             </div>
         </div>
-        <!-- main content area end -->
-        <!-- footer area start-->
         <footer>
             <div class="footer-area">
                 <p>KORPSTAR POLTEKSSN 2020/2021</p>
             </div>
         </footer>
-        <!-- footer area end-->
     </div>
-    <!-- page container area end -->
 	
-	<!-- modal input -->
 			<div id="myModal" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -375,16 +339,13 @@
 	} );
 	</script>
 	
-	<!-- jquery latest version -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <!-- bootstrap 4 js -->
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
-		<!-- Start datatable js -->
 	 <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
@@ -393,21 +354,15 @@
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
 	<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
-    <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <!-- start highcharts js -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <!-- start zingchart js -->
     <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <script>
     zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
     ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
     </script>
-    <!-- all line chart activation -->
     <script src="assets/js/line-chart.js"></script>
-    <!-- all pie chart -->
     <script src="assets/js/pie-chart.js"></script>
-    <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
 	

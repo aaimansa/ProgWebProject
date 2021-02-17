@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 14 Feb 2021 pada 04.59
+-- Generation Time: 17 Feb 2021 pada 10.28
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -31,59 +31,14 @@ CREATE TABLE IF NOT EXISTS `notes` (
   `contents` text NOT NULL,
   `admin` varchar(20) NOT NULL,
   `status` varchar(8) NOT NULL DEFAULT 'aktif'
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `notes`
 --
 
 INSERT INTO `notes` (`id`, `contents`, `admin`, `status`) VALUES
-(24, 'cek', 'Muhammad Hadi', 'aktif');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `sbrg_keluar`
---
-
-CREATE TABLE IF NOT EXISTS `sbrg_keluar` (
-  `id` int(11) NOT NULL,
-  `idx` int(11) NOT NULL,
-  `tgl` date NOT NULL,
-  `jumlah` int(11) NOT NULL,
-  `penerima` varchar(35) NOT NULL,
-  `keterangan` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `sbrg_keluar`
---
-
-INSERT INTO `sbrg_keluar` (`id`, `idx`, `tgl`, `jumlah`, `penerima`, `keterangan`) VALUES
-(15, 244, '2020-08-29', 1000, 'Kasmina', 'Laku');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `sbrg_masuk`
---
-
-CREATE TABLE IF NOT EXISTS `sbrg_masuk` (
-  `id` int(11) NOT NULL,
-  `idx` int(11) NOT NULL,
-  `tgl` date NOT NULL,
-  `jumlah` int(11) NOT NULL,
-  `keterangan` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `sbrg_masuk`
---
-
-INSERT INTO `sbrg_masuk` (`id`, `idx`, `tgl`, `jumlah`, `keterangan`) VALUES
-(9, 244, '2020-08-07', 600, 'kk');
-
--- --------------------------------------------------------
+(25, 'Pengisian kerusakan inventaris kamar maksimal pada 17 Februari 2020 pukul 20.00 WIB', 'Alya Aiman Salsabila', 'aktif');
 
 --
 -- Struktur dari tabel `slogin`
@@ -119,58 +74,22 @@ CREATE TABLE IF NOT EXISTS `sstock_brg` (
   `kodeKamar` varchar(5) NOT NULL,
   `kerusakan` varchar(100) NOT NULL,
   `status` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `sstock_brg`
 --
 
 INSERT INTO `sstock_brg` (`noLaporan`, `tanggalLapor`, `kodeKamar`, `kerusakan`, `status`) VALUES
-(1, '2021-02-14', '212', 'Pendingin ruangan tidak dapat menyala', 'Diusulkan'),
-(2, '0000-00-00', '', 'c', 'c'),
-(3, '0000-00-00', '', 'a', 'a'),
-(4, '0000-00-00', '', 'b', 'b');
+(26, '2021-02-16', 'I212', 'AC bocor', 'Diterima'),
+(27, '2021-02-17', 'I212', 'Plafon bocor', 'Diusulkan');
 
 -- --------------------------------------------------------
-
---
--- Struktur dari tabel `taruna`
---
-
-CREATE TABLE IF NOT EXISTS `taruna` (
-  `id` int(3) NOT NULL,
-  `npm` varchar(10) NOT NULL,
-  `password` varchar(225) NOT NULL,
-  `kodekamar` varchar(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `taruna`
---
-
-INSERT INTO `taruna` (`id`, `npm`, `password`, `kodekamar`) VALUES
-(1, '1817101379', '747091e9c17042fab1568879bd01d5c2', 'I212');
-
---
--- Indexes for dumped tables
---
 
 --
 -- Indexes for table `notes`
 --
 ALTER TABLE `notes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sbrg_keluar`
---
-ALTER TABLE `sbrg_keluar`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sbrg_masuk`
---
-ALTER TABLE `sbrg_masuk`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -186,30 +105,10 @@ ALTER TABLE `sstock_brg`
   ADD PRIMARY KEY (`noLaporan`);
 
 --
--- Indexes for table `taruna`
---
-ALTER TABLE `taruna`
-  ADD PRIMARY KEY (`npm`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
---
--- AUTO_INCREMENT for table `sbrg_keluar`
---
-ALTER TABLE `sbrg_keluar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
---
--- AUTO_INCREMENT for table `sbrg_masuk`
---
-ALTER TABLE `sbrg_masuk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `slogin`
 --
@@ -219,7 +118,7 @@ ALTER TABLE `slogin`
 -- AUTO_INCREMENT for table `sstock_brg`
 --
 ALTER TABLE `sstock_brg`
-  MODIFY `noLaporan` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `noLaporan` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

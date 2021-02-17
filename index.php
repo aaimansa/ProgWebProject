@@ -87,10 +87,7 @@ if($cek > 0){
             </div>
             <div class="col-sm-4">
                 <br/><br/>
-                <div class="alert alert-danger">
-                    <small>Masukkan kembali NPM dan Password</small>
-                </div>
-                <div class="card">
+                <div class="card ">
                     <div class="card-header">
                         <img class = "center" src="stock/poltek.png"">
                     </div>
@@ -105,12 +102,16 @@ if($cek > 0){
                             <input name="password" class="form-control" placeholder="Password" type="password" required="required" autocomplete="off">
                         </div> <!-- form-group// --> 
                         <div class="form-group">
-                            <button type="submit" name="btn-login" class="btn btn-primary btn-block">Login</button>
+                            <button type="submit" name="btn-login" class="btn btn-secondary btn-block">Login</button>
                         </div> <!-- form-group// -->                                                           
                     </form>
                 </div>
             </div>
             <div class="col-sm-4">
+            </div>
+            <br>
+            <div class="alert alert-secondary">
+                <small>Masukkan kembali NPM dan Password</small>
             </div>
         </div> 
     </div>
