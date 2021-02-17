@@ -12,7 +12,7 @@
       type="image/png" 
       href="../favicon.png">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Logistics</title>
+    <title>Dashboard | KORPSTAR POLTEKSSN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -39,6 +39,14 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        }
+    </style>
 </head>
 
 <body>
@@ -55,7 +63,7 @@
         <!-- sidebar menu area start -->
         <div class="sidebar-menu">
             <div class="sidebar-header">
-                    <a href="index.php"><img src="../logo.png" alt="logo" width="100%"></a>
+                    <a href="index.php"><img class = "center" src="poltek.png" alt="logo" width="100%"></a>
             </div>
             <div class="main-menu">
                 <div class="menu-inner">
@@ -63,7 +71,7 @@
                         <ul class="metismenu" id="menu">
 							<li class="active"><a href="index.php"><span>Pengumuman</span></a></li>
                             <li>
-                                <a href="stock.php"><i class="ti-dashboard"></i><span>Kerusakan Inventaris</span></a>
+                                <a href="stock.php"><i class="ti-dashboard"></i><span>Kerusakan Inventaris Kamar</span></a>
                             </li>
                             <li>
                                 <a href="logout.php"><span>Logout</span></a>
@@ -90,7 +98,7 @@
                         </div>
                         <div class="search-box pull-left">
                             <form action="#">
-                                <h2>Hi, <?=$_SESSION['user'];?>!</h2>
+                                <h2>Selamat datang, <?=$_SESSION['user'];?>!</h2>
                             </form>
                         </div>
                     </div>
@@ -135,7 +143,7 @@
                     </div>
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right" style="color:black; padding:0px;">
-                            <img src="log.jpg" width="220px" class="user-name dropdown-toggle" data-toggle="dropdown"\>
+                            <img src="poltek.jpg" width="220px" class="user-name dropdown-toggle" data-toggle="dropdown"\>
                         </div>
                     </div>
                 </div>
@@ -236,7 +244,7 @@
 										<tr>
 										 <th><center> No </center></th>
 										 <th><center> Pengumuman </center></th>
-										 <th><center> Ditulis oleh </center></th>
+										 <th><center> Oleh </center></th>
 										 <th><center>  </center></th>
 
 
@@ -246,7 +254,7 @@
 											<td><center><input type = 'hidden'/></center> </td>
 											<td><center> <input type = 'text' class='form-control' name = 'konten' required /></center> </td>
 											<td><center>Saya, <strong><?=$_SESSION['user'];?></strong> <span class="badge badge-secondary"><?=$_SESSION['role'];?></span></center> </td>
-											<td><center><input type = 'submit' name = 'submit'  class='btn btn-primary btn-sm' value = 'Add Note'/></center></td>
+											<td><center><input type = 'submit' name = 'submit'  class='btn btn-primary btn-sm' value = 'Tambah'/></center></td>
 											<tr>
 										 </form>
 										<?php  
@@ -266,7 +274,7 @@
 										  <td><center>".$i."</center></td>
 										  <td><strong><center>".$data['contents']."</center></strong></td>
 										  <td><strong><center>".$data['admin']."</center></strong></td>
-										  <td><center><input type = 'hidden' name = 'id' value = '".$data['id']."'> <input type='submit' name = 'submit'  class='btn btn-danger btn-sm' value = 'Delete' formaction='del.php' /></center></td>
+										  <td><center><input type = 'hidden' name = 'id' value = '".$data['id']."'> <input type='submit' name = 'submit'  class='btn btn-danger btn-sm' value = 'Hapus' formaction='del.php' /></center></td>
 										  </form></td>
 										  </tr> </form>
 										  ";
@@ -289,7 +297,7 @@
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>KORPSTAR POLTEKSSN</p>
+                <p>KORPSTAR POLTEKSSN 2020/2021</p>
             </div>
         </footer>
         <!-- footer area end-->
@@ -326,4 +334,3 @@
 </body>
 
 </html>
-
