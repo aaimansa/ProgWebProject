@@ -71,12 +71,39 @@ if($cek > 0){
         background-size:cover;
         }
         
-    .center {
+    .image {
         display: block;
         margin-left: auto;
+        margin-top: auto;
         margin-right: auto;
-        width: 50%;
+        width: 100%;
     }
+    .center{
+        display: block;
+        margin-left: auto;
+        margin-top: auto;
+        margin-right: auto;
+        width: 25%;
+    }
+    .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:white;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    }
+    .card-body:hover .overlay {
+    height: 100%;
+    }
+    .formlogin{
+        margin-left : auto;
+        margin-right : auto;
+    }
+
 	</style>
 
     </head>
@@ -86,32 +113,36 @@ if($cek > 0){
             <div class="col-sm-4">
             </div>
             <div class="col-sm-4">
-                <br/><br/>
+            <br><br>
                 <div class="card ">
                     <div class="card-header">
-                        <img class = "center" src="stock/poltek.png"">
                     </div>
                     <div class="card-body">
-						<!-- form berfungsi mengirimkan data input 
-						dengan method post ke proses login dengan paramater get aksi login -->
-                        <form method="post" action="" id="formlogin">
-                        <div class="form-group">
-                            <input name="username" class="form-control" placeholder="NPM" type="text" required="required" autocomplete="off">
-                        </div> <!-- form-group// -->
-                        <div class="form-group">
-                            <input name="password" class="form-control" placeholder="Password" type="password" required="required" autocomplete="off">
-                        </div> <!-- form-group// --> 
-                        <div class="form-group">
-                            <button type="submit" name="btn-login" class="btn btn-secondary btn-block">Login</button>
-                        </div> <!-- form-group// -->                                                           
-                    </form>
+                        <img class="image" src="stock/poltek.png" alt="Avatar">
+                            <div class="overlay">
+                            <!-- form berfungsi mengirimkan data input 
+                            dengan method post ke proses login dengan paramater get aksi login -->
+                            <br><br>
+                            <div class="alert alert-secondary">
+                            <small>Masukkan NPM dan Password yang terdaftar</small>
+                            </div>
+                            <br>
+                            <form method="post" action="" id="formlogin">
+                                <div class="form-group">
+                                    <input name="username" class="form-control" placeholder="NPM" type="text" required="required" autocomplete="off">
+                                </div> <!-- form-group// -->
+                                <div class="form-group">
+                                    <input name="password" class="form-control" placeholder="Password" type="password" required="required" autocomplete="off">
+                                </div> <!-- form-group// --> 
+                                <div class="form-group">
+                                    <button type="submit" name="btn-login" class="btn btn-secondary btn-block">Login</button>
+                                </div> <!-- form-group// -->                                                           
+                            </form>
+                            </div>
+                        </div>
                 </div>
             </div>
             <div class="col-sm-4">
-            </div>
-            <br>
-            <div class="alert alert-secondary">
-                <small>Masukkan kembali NPM dan Password</small>
             </div>
         </div> 
     </div>
