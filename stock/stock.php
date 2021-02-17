@@ -54,7 +54,7 @@
       type="image/png" 
       href="../favicon.png">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Logistics</title>
+    <title>Kerusakan Inventaris Kamar | KORPSTAR POLTEKSSN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -89,6 +89,14 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
 </head>
 
 <body>
@@ -105,7 +113,7 @@
         <!-- sidebar menu area start -->
         <div class="sidebar-menu">
             <div class="sidebar-header">
-                    <a href="index.php"><img src="../logo.png" alt="logo" width="100%"></a>
+                    <a href="index.php"><img class = "center" src="poltek.png" alt="logo" width="50%"></a>
             </div>
             <div class="main-menu">
                 <div class="menu-inner">
@@ -113,7 +121,7 @@
                         <ul class="metismenu" id="menu">
 							<li><a href="index.php"><span>Pengumuman</span></a></li>
                             <li class="active">
-                                <a href="stock.php"><i class="ti-dashboard"></i><span>Kerusakan Inventaris</span></a>
+                                <a href="stock.php"><i class="ti-dashboard"></i><span>Kerusakan Inventaris Kamar</span></a>
                             </li>
                             <li>
                                 <a href="logout.php"><span>Logout</span></a>
@@ -140,7 +148,7 @@
                         </div>
                         <div class="search-box pull-left">
                             <form action="#">
-                                <h2>Hi, <?=$_SESSION['user'];?>!</h2>
+                                <h2>Selamat datang, <?=$_SESSION['user'];?>!</h2>
                             </form>
                         </div>
                     </div>
@@ -179,13 +187,13 @@
                             <h4 class="page-title pull-left">Dashboard</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.php">Home</a></li>
-                                <li><span>Kerusakan Inventaris</span></li>
+                                <li><span>Kerusakan Inventaris Kamar</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right" style="color:black; padding:0px;">
-                            <img src="log.jpg" width="220px" class="user-name dropdown-toggle" data-toggle="dropdown"\>
+                            <img src="poltek.jpg" width="220px" class="user-name dropdown-toggle" data-toggle="dropdown"\>
                         </div>
                     </div>
                 </div>
@@ -199,8 +207,8 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center">
-									<h2>Kerusakan Inventaris</h2>
-									<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2"><span class="glyphicon glyphicon-plus"></span>Tambah Barang</button>
+									<h2>Kerusakan Inventaris Kamar</h2>
+									<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2"><span class="glyphicon glyphicon-plus"></span>Tambah</button>
                                 </div>
                                     <div class="data-tables datatable-dark">
 										 <table id="dataTable3" class="display" style="width:100%"><thead class="thead-dark">
@@ -225,7 +233,7 @@
 													<td><?php echo $p['kodeKamar'] ?></td>
 													<td><?php echo $p['kerusakan'] ?></td>
 													<td><?php echo $p['status'] ?></td>
-                                                    <td><button data-toggle="modal" data-target="#edit<?=$idb;?>" class="btn btn-warning">Edit</button> <button data-toggle="modal" data-target="#del<?=$idb;?>" class="btn btn-danger">Del</button></td>
+                                                    <td><button data-toggle="modal" data-target="#edit<?=$idb;?>" class="btn btn-warning">Edit</button> <button data-toggle="modal" data-target="#del<?=$idb;?>" class="btn btn-danger">Hapus</button></td>
 												</tr>
 
 
@@ -236,7 +244,7 @@
                                                         <form method="post">
                                                             <!-- Modal Header -->
                                                             <div class="modal-header">
-                                                            <h4 class="modal-title">Edit Kerusakan Inventaris <?php echo $p['kodeKamar']?> - <?php echo $p['kerusakan']?> - <?php echo $p['status']?></h4>
+                                                            <h4 class="modal-title">Edit Kerusakan Inventaris Kamar <?php echo $p['kodeKamar']?></h4>
                                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                             </div>
                                                             
@@ -269,13 +277,13 @@
                                                         <form method="post">
                                                             <!-- Modal Header -->
                                                             <div class="modal-header">
-                                                            <h4 class="modal-title">Hapus Barang <?php echo $p['kodeKamar']?> - <?php echo $p['kerusakan']?> - <?php echo $p['status']?></h4>
+                                                            <h4 class="modal-title">Hapus Kerusakan Inventaris Kamar <?php echo $p['kodeKamar']?></h4>
                                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                             </div>
                                                             
                                                             <!-- Modal body -->
                                                             <div class="modal-body">
-                                                            Apakah Anda yakin ingin menghapus barang ini dari daftar stock?
+                                                            Apakah Anda yakin ingin menghapus kerusakan inventaris kamar ini?
                                                             <input type="hidden" name="id" value="<?=$idb;?>">
                                                             </div>
                                                             
@@ -296,7 +304,7 @@
 										</tbody>
 										</table>
                                     </div>
-									<a href="exportstkbhn.php" target="_blank" class="btn btn-info">Export Data</a>
+									<a href="exportstkbhn.php" target="_blank" class="btn btn-info">Ekspor</a>
                                 </div>
                             </div>
                         </div>
@@ -311,7 +319,7 @@
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>KORPSTAR POLTEKSSN</p>
+                <p>KORPSTAR POLTEKSSN 2020/2021</p>
             </div>
         </footer>
         <!-- footer area end-->
@@ -332,10 +340,7 @@
 									<label>Kerusakan</label>
 									<input name="kerusakan" type="text" class="form-control" placeholder="Kerusakan Kamar">
 								</div>
-								<div class="form-group">
-									<label>Status</label>
-									<input name="status" type="text" class="form-control" placeholder="Status">
-								</div>
+
 
 							</div>
 							<div class="modal-footer">
