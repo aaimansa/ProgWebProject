@@ -38,23 +38,28 @@ Aplikasi ini menggunakan pengenkripsian MD5 pada password saat login
 
 ## Tata Cara Instalasi
 
-1. Unduh terlebih dahulu file zip source code
+1. Unduh terlebih dahulu file zip source code\
+ \
 ![instal1](https://user-images.githubusercontent.com/61957837/108297987-bfccbe00-71ce-11eb-93ea-f06f66660379.PNG)
 
 2. Ekstrak file source code
 
 3. Salin folder source code ke dalam folder htdocs (untuk penggunaan xampp)
 
-4. Buatlah database baru pada localhost/phpmyadmin
+4. Buatlah database baru pada localhost/phpmyadmin\
+ \
 ![instal4](https://user-images.githubusercontent.com/61957837/108299944-f9eb8f00-71d1-11eb-9546-674bdf7ee484.PNG)
 
-5. Import database dalam folder source code
+5. Import database dalam folder source code\
+ \
 ![instal5](https://user-images.githubusercontent.com/61957837/108299949-fbb55280-71d1-11eb-8620-6c251d39ad6f.PNG)
 
-6. Atur koneksi database pada file ProgWebProject-main/dbconnect.php
+6. Atur koneksi database pada file ProgWebProject-main/dbconnect.php\
+ \
 ![instal6](https://user-images.githubusercontent.com/61957837/108299950-fc4de900-71d1-11eb-81a7-aee52a86611a.PNG)
 
-7. Buka aplikasi di browser dengan nama yang sama dengan nama folder pada htdocs (localhost/ProgWebProject-main)
+7. Buka aplikasi di browser dengan nama yang sama dengan nama folder pada htdocs (localhost/ProgWebProject-main)\
+ \
 ![instal6](https://user-images.githubusercontent.com/61957837/108298357-64e79680-71cf-11eb-978c-a77b10c87b49.PNG)
 
 ## Manual Penggunaan
@@ -84,7 +89,7 @@ Password  : 1817101458\
  \
 ![man4](https://user-images.githubusercontent.com/61957837/108301522-c4947080-71d4-11eb-856b-d97807e4b17f.PNG)
 
-5. Pada menu kerusakan inventaris kamar, taruna dapat memasukkan kerusakan inventaris kamar. Taruna hanya perlu memasukkan kerusakan inventaris kamar. Aplikasi akan memasukkan data kode kamar sesuai kamar milik taruna tersebut dan status diusulkan\
+5. Pada menu kerusakan inventaris kamar, taruna dapat memasukkan kerusakan inventaris kamar. Taruna hanya perlu memasukkan kerusakan inventaris kamar. Aplikasi akan memasukkan data kode kamar sesuai kamar milik taruna tersebut dan status "diusulkan"\
  \
 ![man5](https://user-images.githubusercontent.com/61957837/108301526-c52d0700-71d4-11eb-9107-bae648ae5153.PNG)\
  \
