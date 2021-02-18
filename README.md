@@ -96,6 +96,6 @@ Password  : 1817101458
 ![man8](https://user-images.githubusercontent.com/61957837/108301527-c5c59d80-71d4-11eb-9bc4-307a0b6a921b.PNG)
 ![man82](https://user-images.githubusercontent.com/61957837/108301536-c9f1bb00-71d4-11eb-8e46-6610d8573f09.PNG)
 
-9. Pada menu log out, taruna akan dialihkan menuju halaman login
+9. Pada menu log out, taruna akan dialihkan menuju halaman login\
 ![man9](https://user-images.githubusercontent.com/61957837/108301537-c9f1bb00-71d4-11eb-8e57-91ac911749f5.PNG)
 ![instal6](https://user-images.githubusercontent.com/61957837/108298357-64e79680-71cf-11eb-978c-a77b10c87b49.PNG)
