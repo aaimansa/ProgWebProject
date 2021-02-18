@@ -45,11 +45,13 @@ Aplikasi ini menggunakan pengenkripsian MD5 pada password saat login
 
 3. Salin folder source code ke dalam folder htdocs (untuk penggunaan xampp)
 
-4. Buatlah database baru pada mysql
+4. Buatlah database baru pada localhost/phpmyadmin
 
-5. Atur koneksi database pada file ProgWebProject-main/dbconnect.php
+5. import database dalam folder source code
 
-6. Buka aplikasi di browser dengan nama yang sama dengan nama folder pada htdocs (localhost/ProgWebProject-main)
+6. Atur koneksi database pada file ProgWebProject-main/dbconnect.php
+
+7. Buka aplikasi di browser dengan nama yang sama dengan nama folder pada htdocs (localhost/ProgWebProject-main)
 ![instal6](https://user-images.githubusercontent.com/61957837/108298357-64e79680-71cf-11eb-978c-a77b10c87b49.PNG)
 
 ## Manual Penggunaan
