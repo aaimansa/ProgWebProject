@@ -29,7 +29,6 @@ $hasil = mysqli_query($conn,$update);
 
 
 if ($hasil){
-//header ('location:view.php');
 echo " <div class='alert alert-success'>
     <strong>Success!</strong> Redirecting you back in 1 seconds.
   </div>

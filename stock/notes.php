@@ -18,15 +18,13 @@ include_once '../dbconnect.php';
 
 $res=mysqli_query($conn,"SELECT * FROM login WHERE id".$_SESSION['id']);
 
-$konten = $_POST['konten'];
+$msg = $_POST['msg'];
 $oleh = $_SESSION['user'];
 
-$update = "INSERT INTO notes (contents, admin) VALUES ('$konten','$oleh')";
-$hasil = mysqli_query($conn,$update);
+$hasil = mysqli_query($conn,"insert into notes values ('','$msg','$oleh','')");
 
 
 if ($hasil){
-//header ('location:view.php');
 echo " <div class='alert alert-success'>
     <strong>Success!</strong> Redirecting you back in 1 seconds.
   </div>

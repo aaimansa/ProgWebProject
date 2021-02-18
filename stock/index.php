@@ -149,14 +149,14 @@
 										 <form method ='POST' action = 'notes.php'>
 										 <tr class="table-active">
 											<td><center><input type = 'hidden'/></center> </td>
-											<td><center> <input type = 'text' class='form-control' name = 'konten' required /></center> </td>
-											<td><center>Saya, <strong><?=$_SESSION['user'];?></strong> <span class="badge badge-secondary"><?=$_SESSION['role'];?></span></center> </td>
+											<td><center> <input type = 'text' class='form-control' name = 'msg' required /></center> </td>
+											<td><center><strong><?=$_SESSION['user'];?></strong> <span class="badge badge-secondary"><?=$_SESSION['kodeKamar'];?></span></center> </td>
 											<td><center><input type = 'submit' name = 'submit'  class='btn btn-primary btn-sm' value = 'Tambah'/></center></td>
 											<tr>
 										 </form>
 										<?php  
 										// Perintah untuk menampilkan data
-										$queri="Select * From notes where status='aktif' Order by id DESC" ;  //menampikan SEMUA data dari tabel
+										$queri="Select * From notes where 1=1 Order by id ASC" ;  //menampikan SEMUA data dari tabel
 
 										$hasil=MySQLi_query ($conn,$queri);    //fungsi untuk SQL
 
