@@ -3,7 +3,7 @@
 ## Sistem Manajemen Kerusakan Inventaris Kamar
 
 Kelompok 1:
-• Alya Aiman Salsabila Arif (1817101379)
+• Alya Aiman Salsabila Arif (1817101379)\n
 • Muhammad Hadi (1817101436)
 • Salsa Alma’ariz (1817101458)
 
