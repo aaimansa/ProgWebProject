@@ -8,6 +8,7 @@ Kelompok 1:
 * Salsa Alma’ariz           (1817101458)
 
 ## Daftar Isi
+
 * [Gambaran Umum Sistem](#GambaranUmumSistem)
 * [Manfaat](#Manfaat)
 * [Fitur Keamanan](#FiturKeamanan)
@@ -17,13 +18,12 @@ Kelompok 1:
 
 ## Gambaran Umum Sistem
 
-Projek ini merupakan aplikasi berbasis web yang dapat menyimpan daftar kerusakan inventaris kamar taruna sesuai kamarnya sendiri. Aplikasi juga bisa melakukan ekspor data dalam bentuk pdf, csv dan excel
+Aplikasi ini adalah aplikasi berbasis web yang dapat menyimpan daftar kerusakan inventaris kamar taruna sesuai dengan kamar taruna itu sendiri. Aplikasi juga bisa melakukan ekspor data dalam bentuk pdf, csv dan excel
 
 ## Manfaat
 
-* Aplikasi ini mempermudah taruna-taruni untuk memasukkan kerusakan inventaris kamar yang rutin dilakukan setiap minggu
+* Aplikasi ini mempermudah taruna-taruni untuk memasukkan kerusakan inventaris kamar yang rutin dilakukan setiap minggu dengan dilakukan secara langsung oleh taruna pemilik kamar tanpa perlu pendataan oleh taruna jaga
 * Aplikasi ini mengurangi penggunaan kertas
-* Aplikasi ini dapat dilakukan secara langsung oleh taruna tanpa perlu pencatatan oleh taruna jaga
 
 ## Fitur Keamanan
 
@@ -31,7 +31,10 @@ Aplikasi ini menggunakan MD5 pada pengenkripsian password saat login
 
 ## Prasyarat
 
-Aplikasi ini hanya dapat digunakan oleh taruna yang terdaftar memiliki NPM, password dan kamar
+*  PHP versi 5.6 atau yang lebih baru
+*  MySQL versi 5.6 atau yang lebih baru
+*  Apache
+*  Google Chrome
 
 ## Tata Cara Instalasi
 
