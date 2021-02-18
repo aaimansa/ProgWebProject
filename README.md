@@ -1,5 +1,4 @@
 # ProgWebProject
-<<<<<<< HEAD
 
 ## Sistem Manajemen Kerusakan Inventaris Kamar
 
@@ -38,5 +37,3 @@ Aplikasi ini hanya dapat digunakan oleh taruna yang terdaftar memiliki NPM, pass
 ## Tata Cara Instalasi
 
 ## Manual Penggunaan
-=======
->>>>>>> 4acab6f7f93cf4d7856e391b54543dc4aa48d322
