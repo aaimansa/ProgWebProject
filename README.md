@@ -3,9 +3,9 @@
 ## Sistem Manajemen Kerusakan Inventaris Kamar
 
 Kelompok 1:
-• Alya Aiman Salsabila Arif (1817101379)
-• Muhammad Hadi             (1817101436)
-• Salsa Alma’ariz           (1817101458)
+* Alya Aiman Salsabila Arif (1817101379)
+* Muhammad Hadi             (1817101436)
+* Salsa Alma’ariz           (1817101458)
 
 ## Daftar Isi
 * [Gambaran Umum Sistem](#GambaranUmumSistem)
@@ -21,9 +21,9 @@ Projek ini merupakan aplikasi berbasis web yang dapat menyimpan daftar kerusakan
 
 ## Manfaat
 
-• Aplikasi ini mempermudah taruna-taruni untuk memasukkan kerusakan inventaris kamar yang rutin dilakukan setiap minggu
-• Aplikasi ini mengurangi penggunaan kertas
-• Aplikasi ini dapat dilakukan secara langsung oleh taruna tanpa perlu pencatatan oleh taruna jaga
+* Aplikasi ini mempermudah taruna-taruni untuk memasukkan kerusakan inventaris kamar yang rutin dilakukan setiap minggu
+* Aplikasi ini mengurangi penggunaan kertas
+* Aplikasi ini dapat dilakukan secara langsung oleh taruna tanpa perlu pencatatan oleh taruna jaga
 
 ## Fitur Keamanan
 
