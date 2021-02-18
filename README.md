@@ -9,7 +9,7 @@ Kelompok 1:
 
 ## Daftar Isi
 
-- [Gambaran Umum Sistem] (# GambaranUmumSistem)
+* [Gambaran Umum Sistem] (# GambaranUmumSistem)
 - [Manfaat] (# Manfaat)
 - [Fitur Keamanan] (# FiturKeamanan)
 - [Prasyarat] (#Prasyarat)
