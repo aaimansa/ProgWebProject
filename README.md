@@ -27,7 +27,7 @@ Aplikasi ini adalah aplikasi berbasis web yang dapat menyimpan daftar kerusakan 
 
 ## Fitur Keamanan
 
-Aplikasi ini menggunakan MD5 pada pengenkripsian password saat login
+Aplikasi ini menggunakan pengenkripsian MD5 pada password saat login
 
 ## Prasyarat
 
