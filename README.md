@@ -8,13 +8,12 @@ Kelompok 1:
 • Salsa Alma’ariz (1817101458)
 
 ## Daftar Isi
-* [General info](#general-info)
-* [Gambaran Umum Sistem] (# GambaranUmumSistem)
-- [Manfaat] (# Manfaat)
-- [Fitur Keamanan] (# FiturKeamanan)
-- [Prasyarat] (#Prasyarat)
-- [Tata Cara Instalasi] (# TataCaraInstalasi)
-- [Manual Penggunaan] (# ManualPenggunaan)
+* [Gambaran Umum Sistem](#GambaranUmumSistem)
+* [Manfaat](#Manfaat)
+* [Fitur Keamanan](#FiturKeamanan)
+* [Prasyarat](#Prasyarat)
+* [Tata Cara Instalasi](#TataCaraInstalasi)
+* [Manual Penggunaan](#ManualPenggunaan)
 
 ## Gambaran Umum Sistem
 
