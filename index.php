@@ -125,8 +125,7 @@ if($cek > 0){
                             <div class="alert alert-secondary">
                             <small>Masukkan NPM dan Password yang terdaftar</small>
                             </div>
-                            <br>
-                            <form method="post" action="" id="formlogin">
+                            <form method="post" action="" id="formlogin" style="margin:10%">
                                 <div class="form-group">
                                     <input name="username" class="form-control" placeholder="NPM" type="text" required="required" autocomplete="off">
                                 </div> <!-- form-group// -->
